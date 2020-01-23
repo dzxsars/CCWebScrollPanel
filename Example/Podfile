@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'CCWebScrollPanel_Example' do
+  pod 'CCWebScrollPanel', :path => '../'
+
+  target 'CCWebScrollPanel_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
