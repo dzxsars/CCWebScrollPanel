@@ -10,6 +10,11 @@
 #endif
 #endif
 
+#import "CCWebScrollPanelTopView.h"
+#import "CCWebScrollPanelViewController.h"
+#import "CCWebViewProtocol.h"
+#import "UIWebView+CCWebView.h"
+#import "WKWebView+CCWebView.h"
 
 FOUNDATION_EXPORT double CCWebScrollPanelVersionNumber;
 FOUNDATION_EXPORT const unsigned char CCWebScrollPanelVersionString[];

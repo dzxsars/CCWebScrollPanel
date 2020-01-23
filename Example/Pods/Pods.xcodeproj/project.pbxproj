@@ -8,15 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		0D0035008390A431A4920E0C6DD54DAC /* Pods-CCWebScrollPanel_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A69CFC22CE45F5C3203D2F6F551580 /* Pods-CCWebScrollPanel_Tests-dummy.m */; };
-		732E5FFC97B74BCF609E6C04CDA94F86 /* CCWebScrollPanel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE4B1C2304E946D539E5A0F4C2AAAE58 /* CCWebScrollPanel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8847BB91351CCE4D9503558E1608050E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		1180B44178C2D10D6AA9917B8D47F26E /* CCWebScrollPanel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FFA59817BF6C02E3D76C6D80852E456B /* CCWebScrollPanel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17ED0D8F12DA9D0E0DBAC9438028F602 /* UIWebView+CCWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = D3470169A610795488109D34FC06C53B /* UIWebView+CCWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C4B55E8F38B26C367B5D762AB416E92 /* WKWebView+CCWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = BD59141C10C28C0E910208CC1CDC5183 /* WKWebView+CCWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52695E7E37FDC513AC9AF52B12E0DC71 /* CCWebScrollPanel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D29FD5ACA53500A3D39915B5D657BC68 /* CCWebScrollPanel-dummy.m */; };
+		61367E5AFAA9AA78D213CB783F52A90E /* CCWebScrollPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AED1D2AB6943423C3AD2C04A3ECB45 /* CCWebScrollPanelViewController.m */; };
+		661734B0482820907444E41A128948B7 /* CCWebScrollPanelTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = A85FF51E03A488637372AC7DC19DCDD2 /* CCWebScrollPanelTopView.m */; };
 		8A40D511944DB2A76EA1CB25985F69D5 /* Pods-CCWebScrollPanel_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6212C840D139BC8699F2006631B28428 /* Pods-CCWebScrollPanel_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		90B995E3C3ADBABB82EF3614134FD8FC /* Pods-CCWebScrollPanel_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1297CB7FACB055AC795E88353A18CC /* Pods-CCWebScrollPanel_Example-dummy.m */; };
+		A1E5B20F77B4D678C2A0BCBB86C46EF0 /* UIWebView+CCWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7683D4BACCF7D88592CF4ABC2C6EB182 /* UIWebView+CCWebView.m */; };
+		A5780C280B0BCAD6284FAB19A1041B80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		B0DCFA27DDC0EB48D44F531CB5B7DB4A /* Pods-CCWebScrollPanel_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000676010113E57D05370AB8649F2003 /* Pods-CCWebScrollPanel_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4955698CEAFD96FF7CEA5ED7A8B3E6D /* CCWebScrollPanelTopView.h in Headers */ = {isa = PBXBuildFile; fileRef = 25960C393BFAE207CD921B3FCB58491A /* CCWebScrollPanelTopView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7FBDA6C26B25C4CE0933A2DF77F6309 /* CCWebScrollPanelViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 91E90C1ABBF105F87B50ED65EDB28CEA /* CCWebScrollPanelViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7C1B1EA5748CB4989A842211B95B73F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		D14EFF9FC18679E5F7FA7CE1C58230AF /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EEF4BBF6F7C1847370458CF6390204B /* ReplaceMe.m */; };
+		CDB8EBA35EC9EFA92ED2D59A216136CF /* CCWebViewProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D1B8AD82DCC65B20E8BD9F4859592131 /* CCWebViewProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E731A641BDACC82990BE7D8FCBB6EE3E /* WKWebView+CCWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0B42A216C404FCE26043AAEE0AC69B /* WKWebView+CCWebView.m */; };
 		EFB902F40989956BFC8F321B7363C084 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		F790C9BCC0D0F418E83ECAD4B0519B1E /* CCWebScrollPanel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B67095D97D2D3EDA5E80AE3D68BF92D9 /* CCWebScrollPanel-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,37 +46,45 @@
 
 /* Begin PBXFileReference section */
 		000676010113E57D05370AB8649F2003 /* Pods-CCWebScrollPanel_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CCWebScrollPanel_Example-umbrella.h"; sourceTree = "<group>"; };
+		006B7215912D6FF3D024677564CB568B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		063DDD56AD489AD7E830EF21A011334D /* CCWebScrollPanel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CCWebScrollPanel-Info.plist"; sourceTree = "<group>"; };
+		0856CA15D175021DF5E3CCFDD334830F /* CCWebScrollPanel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CCWebScrollPanel-prefix.pch"; sourceTree = "<group>"; };
 		12D9141DBB7326460E6C1C0E89AF21C4 /* Pods-CCWebScrollPanel_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CCWebScrollPanel_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		13302F5C4BB0B4141714DA9040685569 /* CCWebScrollPanel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CCWebScrollPanel.modulemap; sourceTree = "<group>"; };
-		134649ED0704D500A64AFF6B1F93854B /* CCWebScrollPanel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CCWebScrollPanel.xcconfig; sourceTree = "<group>"; };
 		169F3500189D0598BC4669B6E8849A3F /* Pods-CCWebScrollPanel_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CCWebScrollPanel_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		17C17ACE1E14E8A6491EA9A83830C556 /* Pods-CCWebScrollPanel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CCWebScrollPanel_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		1EEF4BBF6F7C1847370458CF6390204B /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = CCWebScrollPanel/Classes/ReplaceMe.m; sourceTree = "<group>"; };
 		2482CF46D32CF9159B777A6F0B4E8191 /* Pods-CCWebScrollPanel_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CCWebScrollPanel_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		25960C393BFAE207CD921B3FCB58491A /* CCWebScrollPanelTopView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCWebScrollPanelTopView.h; path = CCWebScrollPanel/Classes/CCWebScrollPanelTopView.h; sourceTree = "<group>"; };
+		2600DDCC3A6CACD33B00B7C043AA7B07 /* CCWebScrollPanel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CCWebScrollPanel.xcconfig; sourceTree = "<group>"; };
 		292C834376C236A10A033C96A39C4B32 /* Pods-CCWebScrollPanel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CCWebScrollPanel_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		2D95B4F1DA3E1B7FC98D9D39F9D92982 /* CCWebScrollPanel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CCWebScrollPanel.framework; path = CCWebScrollPanel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F6E2300D168F6D2924BC40D7E37278B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4D2140E9F67A5060340CB97C42AE06B4 /* Pods_CCWebScrollPanel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CCWebScrollPanel_Tests.framework; path = "Pods-CCWebScrollPanel_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		510ECA40545A743F7B116C9E2B0775FD /* Pods-CCWebScrollPanel_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CCWebScrollPanel_Example-Info.plist"; sourceTree = "<group>"; };
 		5D1297CB7FACB055AC795E88353A18CC /* Pods-CCWebScrollPanel_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CCWebScrollPanel_Example-dummy.m"; sourceTree = "<group>"; };
 		6212C840D139BC8699F2006631B28428 /* Pods-CCWebScrollPanel_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CCWebScrollPanel_Tests-umbrella.h"; sourceTree = "<group>"; };
-		6748984912D94E0578BEAA3FCE240F76 /* CCWebScrollPanel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CCWebScrollPanel-Info.plist"; sourceTree = "<group>"; };
+		63EB20D06BB5185EB019D57853B44F53 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		6E0B42A216C404FCE26043AAEE0AC69B /* WKWebView+CCWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "WKWebView+CCWebView.m"; path = "CCWebScrollPanel/Classes/WKWebView+CCWebView.m"; sourceTree = "<group>"; };
+		7683D4BACCF7D88592CF4ABC2C6EB182 /* UIWebView+CCWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+CCWebView.m"; path = "CCWebScrollPanel/Classes/UIWebView+CCWebView.m"; sourceTree = "<group>"; };
 		76DECC1E818C08D9B480D3E62705AB79 /* Pods_CCWebScrollPanel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CCWebScrollPanel_Example.framework; path = "Pods-CCWebScrollPanel_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82AED1D2AB6943423C3AD2C04A3ECB45 /* CCWebScrollPanelViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCWebScrollPanelViewController.m; path = CCWebScrollPanel/Classes/CCWebScrollPanelViewController.m; sourceTree = "<group>"; };
 		871E1DB1583D88DC93749C6B07AAF685 /* Pods-CCWebScrollPanel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CCWebScrollPanel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		91E90C1ABBF105F87B50ED65EDB28CEA /* CCWebScrollPanelViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCWebScrollPanelViewController.h; path = CCWebScrollPanel/Classes/CCWebScrollPanelViewController.h; sourceTree = "<group>"; };
 		9A77C7EA20F5D2B08CEF909341797EE9 /* Pods-CCWebScrollPanel_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CCWebScrollPanel_Example-frameworks.sh"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E71ED5DCEB3201CAAF090727E15D482 /* Pods-CCWebScrollPanel_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CCWebScrollPanel_Tests-Info.plist"; sourceTree = "<group>"; };
-		A99187E213AECD53C995C06B91927E06 /* CCWebScrollPanel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CCWebScrollPanel-prefix.pch"; sourceTree = "<group>"; };
-		B2D2577BDD827BA2CCE2B4240E47D950 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		B67095D97D2D3EDA5E80AE3D68BF92D9 /* CCWebScrollPanel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CCWebScrollPanel-dummy.m"; sourceTree = "<group>"; };
+		A85FF51E03A488637372AC7DC19DCDD2 /* CCWebScrollPanelTopView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCWebScrollPanelTopView.m; path = CCWebScrollPanel/Classes/CCWebScrollPanelTopView.m; sourceTree = "<group>"; };
+		BA5EBF5CE0D725E017EC9895C0863F58 /* CCWebScrollPanel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CCWebScrollPanel.modulemap; sourceTree = "<group>"; };
+		BD59141C10C28C0E910208CC1CDC5183 /* WKWebView+CCWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WKWebView+CCWebView.h"; path = "CCWebScrollPanel/Classes/WKWebView+CCWebView.h"; sourceTree = "<group>"; };
+		D1B8AD82DCC65B20E8BD9F4859592131 /* CCWebViewProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCWebViewProtocol.h; path = CCWebScrollPanel/Classes/CCWebViewProtocol.h; sourceTree = "<group>"; };
+		D29FD5ACA53500A3D39915B5D657BC68 /* CCWebScrollPanel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CCWebScrollPanel-dummy.m"; sourceTree = "<group>"; };
+		D3470169A610795488109D34FC06C53B /* UIWebView+CCWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWebView+CCWebView.h"; path = "CCWebScrollPanel/Classes/UIWebView+CCWebView.h"; sourceTree = "<group>"; };
 		D6A69CFC22CE45F5C3203D2F6F551580 /* Pods-CCWebScrollPanel_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CCWebScrollPanel_Tests-dummy.m"; sourceTree = "<group>"; };
 		DA1E234B90C352000B4A8F93B37C662D /* Pods-CCWebScrollPanel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CCWebScrollPanel_Example.release.xcconfig"; sourceTree = "<group>"; };
+		DD22A7A5EF62990C807331228CB51362 /* CCWebScrollPanel.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CCWebScrollPanel.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E69B65B20B19492CCEBFFDE760453D28 /* Pods-CCWebScrollPanel_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CCWebScrollPanel_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		EE4B1C2304E946D539E5A0F4C2AAAE58 /* CCWebScrollPanel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CCWebScrollPanel-umbrella.h"; sourceTree = "<group>"; };
-		F2C9819F20B49ACB02D2F4C1F6236D1A /* CCWebScrollPanel.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CCWebScrollPanel.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F821CAA0298BC8001E5C3AF2EC856BFF /* Pods-CCWebScrollPanel_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CCWebScrollPanel_Example.modulemap"; sourceTree = "<group>"; };
 		F9FD5A260727CED9EDC757DBC3C7546C /* Pods-CCWebScrollPanel_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CCWebScrollPanel_Tests.modulemap"; sourceTree = "<group>"; };
+		FFA59817BF6C02E3D76C6D80852E456B /* CCWebScrollPanel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CCWebScrollPanel-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,19 +96,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		101FE8EEEB17E1F84A2AB4377EEBACFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5780C280B0BCAD6284FAB19A1041B80 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DBA4AC6CB2A53420EDA3EFF677BE7E6E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EFB902F40989956BFC8F321B7363C084 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EFE59AC880D4E221336F0C71B44034FC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8847BB91351CCE4D9503558E1608050E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,28 +132,31 @@
 			path = "Target Support Files/Pods-CCWebScrollPanel_Example";
 			sourceTree = "<group>";
 		};
-		1F7E7576CF462C3E931F12855DFA6C30 /* Support Files */ = {
+		12AE5D02BC4FD7E9DB503B1D2A7F3A80 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				13302F5C4BB0B4141714DA9040685569 /* CCWebScrollPanel.modulemap */,
-				134649ED0704D500A64AFF6B1F93854B /* CCWebScrollPanel.xcconfig */,
-				B67095D97D2D3EDA5E80AE3D68BF92D9 /* CCWebScrollPanel-dummy.m */,
-				6748984912D94E0578BEAA3FCE240F76 /* CCWebScrollPanel-Info.plist */,
-				A99187E213AECD53C995C06B91927E06 /* CCWebScrollPanel-prefix.pch */,
-				EE4B1C2304E946D539E5A0F4C2AAAE58 /* CCWebScrollPanel-umbrella.h */,
+				2ED8F8863E0A2D042C48065641677D0D /* CCWebScrollPanel */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/CCWebScrollPanel";
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		2A889F4AE6DF1A5251410B46E7B68916 /* Pod */ = {
+		2ED8F8863E0A2D042C48065641677D0D /* CCWebScrollPanel */ = {
 			isa = PBXGroup;
 			children = (
-				F2C9819F20B49ACB02D2F4C1F6236D1A /* CCWebScrollPanel.podspec */,
-				B2D2577BDD827BA2CCE2B4240E47D950 /* LICENSE */,
-				2F6E2300D168F6D2924BC40D7E37278B /* README.md */,
+				25960C393BFAE207CD921B3FCB58491A /* CCWebScrollPanelTopView.h */,
+				A85FF51E03A488637372AC7DC19DCDD2 /* CCWebScrollPanelTopView.m */,
+				91E90C1ABBF105F87B50ED65EDB28CEA /* CCWebScrollPanelViewController.h */,
+				82AED1D2AB6943423C3AD2C04A3ECB45 /* CCWebScrollPanelViewController.m */,
+				D1B8AD82DCC65B20E8BD9F4859592131 /* CCWebViewProtocol.h */,
+				D3470169A610795488109D34FC06C53B /* UIWebView+CCWebView.h */,
+				7683D4BACCF7D88592CF4ABC2C6EB182 /* UIWebView+CCWebView.m */,
+				BD59141C10C28C0E910208CC1CDC5183 /* WKWebView+CCWebView.h */,
+				6E0B42A216C404FCE26043AAEE0AC69B /* WKWebView+CCWebView.m */,
+				AD0C479BB8415A61B8862B4AD95F7A5E /* Pod */,
+				7D3B425FF1D78939FD15ED8923FB475E /* Support Files */,
 			);
-			name = Pod;
+			name = CCWebScrollPanel;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		36A8AA0DA47D24AB22899B5D0C82C831 /* Targets Support Files */ = {
@@ -165,23 +184,28 @@
 			path = "Target Support Files/Pods-CCWebScrollPanel_Tests";
 			sourceTree = "<group>";
 		};
-		AEC39E83CE4BBCC8DDCE0DC3C90AE32D /* CCWebScrollPanel */ = {
+		7D3B425FF1D78939FD15ED8923FB475E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1EEF4BBF6F7C1847370458CF6390204B /* ReplaceMe.m */,
-				2A889F4AE6DF1A5251410B46E7B68916 /* Pod */,
-				1F7E7576CF462C3E931F12855DFA6C30 /* Support Files */,
+				BA5EBF5CE0D725E017EC9895C0863F58 /* CCWebScrollPanel.modulemap */,
+				2600DDCC3A6CACD33B00B7C043AA7B07 /* CCWebScrollPanel.xcconfig */,
+				D29FD5ACA53500A3D39915B5D657BC68 /* CCWebScrollPanel-dummy.m */,
+				063DDD56AD489AD7E830EF21A011334D /* CCWebScrollPanel-Info.plist */,
+				0856CA15D175021DF5E3CCFDD334830F /* CCWebScrollPanel-prefix.pch */,
+				FFA59817BF6C02E3D76C6D80852E456B /* CCWebScrollPanel-umbrella.h */,
 			);
-			name = CCWebScrollPanel;
-			path = ../..;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/CCWebScrollPanel";
 			sourceTree = "<group>";
 		};
-		BE9C612611D4F485DD167E0AB9982BE7 /* Development Pods */ = {
+		AD0C479BB8415A61B8862B4AD95F7A5E /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				AEC39E83CE4BBCC8DDCE0DC3C90AE32D /* CCWebScrollPanel */,
+				DD22A7A5EF62990C807331228CB51362 /* CCWebScrollPanel.podspec */,
+				006B7215912D6FF3D024677564CB568B /* LICENSE */,
+				63EB20D06BB5185EB019D57853B44F53 /* README.md */,
 			);
-			name = "Development Pods";
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -206,7 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				BE9C612611D4F485DD167E0AB9982BE7 /* Development Pods */,
+				12AE5D02BC4FD7E9DB503B1D2A7F3A80 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				CA5A65C40C53418DC9D5C3ED2B47B842 /* Products */,
 				36A8AA0DA47D24AB22899B5D0C82C831 /* Targets Support Files */,
@@ -224,11 +248,16 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		11872D52EDEB80B4FD790684C868F558 /* Headers */ = {
+		0D5D84A607DC7B7FE97F3DD42B1C40EE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				732E5FFC97B74BCF609E6C04CDA94F86 /* CCWebScrollPanel-umbrella.h in Headers */,
+				1180B44178C2D10D6AA9917B8D47F26E /* CCWebScrollPanel-umbrella.h in Headers */,
+				B4955698CEAFD96FF7CEA5ED7A8B3E6D /* CCWebScrollPanelTopView.h in Headers */,
+				B7FBDA6C26B25C4CE0933A2DF77F6309 /* CCWebScrollPanelViewController.h in Headers */,
+				CDB8EBA35EC9EFA92ED2D59A216136CF /* CCWebViewProtocol.h in Headers */,
+				17ED0D8F12DA9D0E0DBAC9438028F602 /* UIWebView+CCWebView.h in Headers */,
+				1C4B55E8F38B26C367B5D762AB416E92 /* WKWebView+CCWebView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,12 +282,12 @@
 /* Begin PBXNativeTarget section */
 		1E652A512C177209731209039EA1980D /* CCWebScrollPanel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5F048FA18A55A810D5A17D289A436D23 /* Build configuration list for PBXNativeTarget "CCWebScrollPanel" */;
+			buildConfigurationList = 8D4A4613E8190F96D7992EEEBC68F2CD /* Build configuration list for PBXNativeTarget "CCWebScrollPanel" */;
 			buildPhases = (
-				11872D52EDEB80B4FD790684C868F558 /* Headers */,
-				C466D5447D6379B1AE435AA20059071D /* Sources */,
-				EFE59AC880D4E221336F0C71B44034FC /* Frameworks */,
-				9ECDD92343A55CEB12360779FE871D8C /* Resources */,
+				0D5D84A607DC7B7FE97F3DD42B1C40EE /* Headers */,
+				66BFB92BD0FE56D9B169E5F15B71AF9C /* Sources */,
+				101FE8EEEB17E1F84A2AB4377EEBACFF /* Frameworks */,
+				DB4C16DA55481F327E88EF778FAC1213 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -337,14 +366,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9ECDD92343A55CEB12360779FE871D8C /* Resources */ = {
+		B44F2E48E1A578E55A04678D1E8F5736 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B44F2E48E1A578E55A04678D1E8F5736 /* Resources */ = {
+		DB4C16DA55481F327E88EF778FAC1213 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -377,12 +406,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C466D5447D6379B1AE435AA20059071D /* Sources */ = {
+		66BFB92BD0FE56D9B169E5F15B71AF9C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F790C9BCC0D0F418E83ECAD4B0519B1E /* CCWebScrollPanel-dummy.m in Sources */,
-				D14EFF9FC18679E5F7FA7CE1C58230AF /* ReplaceMe.m in Sources */,
+				52695E7E37FDC513AC9AF52B12E0DC71 /* CCWebScrollPanel-dummy.m in Sources */,
+				661734B0482820907444E41A128948B7 /* CCWebScrollPanelTopView.m in Sources */,
+				61367E5AFAA9AA78D213CB783F52A90E /* CCWebScrollPanelViewController.m in Sources */,
+				A1E5B20F77B4D678C2A0BCBB86C46EF0 /* UIWebView+CCWebView.m in Sources */,
+				E731A641BDACC82990BE7D8FCBB6EE3E /* WKWebView+CCWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,9 +496,9 @@
 			};
 			name = Release;
 		};
-		6AC1A17420AF8DDDEFAE891F758D8942 /* Debug */ = {
+		7EAF398938E1B6A5D6A8FEC63004A227 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 134649ED0704D500A64AFF6B1F93854B /* CCWebScrollPanel.xcconfig */;
+			baseConfigurationReference = 2600DDCC3A6CACD33B00B7C043AA7B07 /* CCWebScrollPanel.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -490,10 +522,11 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -559,6 +592,37 @@
 			};
 			name = Debug;
 		};
+		AA65A6AD391FCE4099EA32A06FE716C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2600DDCC3A6CACD33B00B7C043AA7B07 /* CCWebScrollPanel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CCWebScrollPanel/CCWebScrollPanel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CCWebScrollPanel/CCWebScrollPanel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CCWebScrollPanel/CCWebScrollPanel.modulemap";
+				PRODUCT_MODULE_NAME = CCWebScrollPanel;
+				PRODUCT_NAME = CCWebScrollPanel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		B4973C646CE07D1D0E5C75E8170941AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 292C834376C236A10A033C96A39C4B32 /* Pods-CCWebScrollPanel_Example.debug.xcconfig */;
@@ -591,38 +655,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		BFF039CE9AB55FDD15F43ADD659CD1CA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 134649ED0704D500A64AFF6B1F93854B /* CCWebScrollPanel.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CCWebScrollPanel/CCWebScrollPanel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CCWebScrollPanel/CCWebScrollPanel-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CCWebScrollPanel/CCWebScrollPanel.modulemap";
-				PRODUCT_MODULE_NAME = CCWebScrollPanel;
-				PRODUCT_NAME = CCWebScrollPanel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		C8D0CDCD000112CAFFBD13F48A7068B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -746,20 +778,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5F048FA18A55A810D5A17D289A436D23 /* Build configuration list for PBXNativeTarget "CCWebScrollPanel" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6AC1A17420AF8DDDEFAE891F758D8942 /* Debug */,
-				BFF039CE9AB55FDD15F43ADD659CD1CA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		86B6D632750F1176B48A0DF99D77F19F /* Build configuration list for PBXNativeTarget "Pods-CCWebScrollPanel_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B4973C646CE07D1D0E5C75E8170941AF /* Debug */,
 				FE63A30097D78B3A7E51D651E53F9DDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D4A4613E8190F96D7992EEEBC68F2CD /* Build configuration list for PBXNativeTarget "CCWebScrollPanel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA65A6AD391FCE4099EA32A06FE716C7 /* Debug */,
+				7EAF398938E1B6A5D6A8FEC63004A227 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
