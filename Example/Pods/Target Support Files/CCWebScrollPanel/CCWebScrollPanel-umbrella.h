@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "CCWebScrollPanelBundleUtil.h"
 #import "CCWebScrollPanelTopView.h"
 #import "CCWebScrollPanelViewController.h"
 #import "CCWebViewProtocol.h"

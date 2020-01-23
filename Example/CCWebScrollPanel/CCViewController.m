@@ -46,6 +46,7 @@
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com/s?wd=UIWebview"]]];
     
     CCWebScrollPanelViewController *viewController = [[CCWebScrollPanelViewController alloc] initWithWebView:webView delegate:self];
+    [viewController setPanelTitle:@"打开UIWebView(固定高)"];
     [self presentViewController:viewController animated:YES completion:nil];
 }
 
@@ -56,6 +57,7 @@
     
     CCWebScrollPanelViewController *viewController = [[CCWebScrollPanelViewController alloc] initWithWebView:webView delegate:self];
     viewController.heightIncreaseMode = YES;
+    [viewController setPanelTitle:@"打开WKWebView(可增高)"];
     [self presentViewController:viewController animated:YES completion:nil];
 }
 

@@ -1,5 +1,5 @@
 PODS:
-  - CCWebScrollPanel (0.1.0)
+  - CCWebScrollPanel (0.0.1)
 
 DEPENDENCIES:
   - CCWebScrollPanel (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CCWebScrollPanel: 6c43eb6d4d91a4f002b67a0430319970316b7a3c
+  CCWebScrollPanel: 431a0f905db5d8aa2029fc5d60c764a9d2df2fb7
 
 PODFILE CHECKSUM: 3cd18693b90796fa43805b6cbdc4916717ccac55
 
