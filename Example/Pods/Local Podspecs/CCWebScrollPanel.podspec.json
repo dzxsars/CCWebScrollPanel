@@ -1,0 +1,22 @@
+{
+  "name": "CCWebScrollPanel",
+  "version": "0.1.0",
+  "summary": "A short description of CCWebScrollPanel.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/duzhixia/CCWebScrollPanel",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "duzhixia": "duzhixia@bytedance.com"
+  },
+  "source": {
+    "git": "https://github.com/duzhixia/CCWebScrollPanel.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "CCWebScrollPanel/Classes/**/*"
+}
