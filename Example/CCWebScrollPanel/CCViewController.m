@@ -14,6 +14,8 @@
 
 @interface CCViewController ()<CCWebViewScrollPanelActionDelegate>
 
+@property (nonatomic, strong) UIImageView *imageView;
+
 @end
 
 @implementation CCViewController
@@ -22,6 +24,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.imageView = [[UIImageView alloc] init];
+    [self.view addSubview:self.imageView];
+    
+    self.imageView.frame = [UIScreen mainScreen].bounds;
+    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.imageView.image = [UIImage imageNamed:@"lucky-star"];
     
     UIButton *button1 = [[UIButton alloc] init];
     [button1 setTitle:@"UIWebView" forState:UIControlStateNormal];
@@ -47,6 +56,7 @@
     
     CCWebScrollPanelViewController *viewController = [[CCWebScrollPanelViewController alloc] initWithWebView:webView delegate:self];
     [viewController setPanelTitle:@"打开UIWebView(固定高)"];
+    [viewController setBackgroundMaskType:CCWebScrollPanelBackgroundMaskTypeGray];
     [self presentViewController:viewController animated:YES completion:nil];
 }
 
@@ -58,6 +68,7 @@
     CCWebScrollPanelViewController *viewController = [[CCWebScrollPanelViewController alloc] initWithWebView:webView delegate:self];
     viewController.heightIncreaseMode = YES;
     [viewController setPanelTitle:@"打开WKWebView(可增高)"];
+    [viewController setBackgroundMaskType:CCWebScrollPanelBackgroundMaskTypeGaussian];
     [self presentViewController:viewController animated:YES completion:nil];
 }
 

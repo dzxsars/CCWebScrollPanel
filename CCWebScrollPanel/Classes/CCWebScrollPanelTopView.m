@@ -7,6 +7,8 @@
 
 #import "CCWebScrollPanelTopView.h"
 
+#import "CCWebScrollPanelBundleUtil.h"
+
 @implementation CCWebScrollPanelTopView
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -38,7 +40,7 @@
     
     NSLayoutConstraint *titleCenterXConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1 constant:0];
     NSLayoutConstraint *titleCenterYConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1 constant:0];
-    NSLayoutConstraint *titleTrailingConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.closeButton attribute:NSLayoutAttributeLeading multiplier:1 constant:-5];
+    NSLayoutConstraint *titleTrailingConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationLessThanOrEqual toItem:self.closeButton attribute:NSLayoutAttributeLeading multiplier:1 constant:-5];
 
     [self addConstraint:titleCenterXConstraint];
     [self addConstraint:titleCenterYConstraint];
@@ -60,7 +62,7 @@
 {
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] init];
-        _titleLabel.textColor = [UIColor blackColor];
+        _titleLabel.textColor = [UIColor whiteColor];
         _titleLabel.font = [UIFont systemFontOfSize:16];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
@@ -71,8 +73,10 @@
 - (UIButton *)closeButton
 {
     if (!_closeButton) {
-        _closeButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        _closeButton = [[UIButton alloc] init];
         _closeButton.translatesAutoresizingMaskIntoConstraints = NO;
+        [_closeButton setImage:[[CCWebScrollPanelBundleUtil imageWithName:@"close"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        _closeButton.tintColor = [UIColor whiteColor];
     }
     return _closeButton;
 }

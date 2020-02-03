@@ -14,6 +14,8 @@
 @property (nonatomic, strong) UIView<CCWebView> *webView;
 @property (nonatomic, strong) CCWebScrollPanelTopView *topView;
 @property (nonatomic, strong) UIView *containerView;
+@property (nonatomic, strong) UIView *backgroundGrayMaskView;
+@property (nonatomic, strong) UIVisualEffectView *backgroundGaussianMaskView;
 
 @property (nonatomic, strong) UITapGestureRecognizer *backgroundTapGesture;
 @property (nonatomic, strong) UIPanGestureRecognizer *topBarPanGesture;
@@ -49,27 +51,72 @@
     return self;
 }
 
+#pragma mark - Public
+
+- (void)setPanelTitle:(NSString *)title
+{
+    self.topView.titleLabel.text = title;
+}
+
+- (void)setBackgroundMaskType:(CCWebScrollPanelBackgroundMaskType)maskType
+{
+    [UIView animateWithDuration:0.5 animations:^{
+        switch (maskType) {
+            case CCWebScrollPanelBackgroundMaskTypeNone:
+            {
+                [self __moveContainerToSuperview:self.view];
+                self.backgroundGrayMaskView.hidden = self.backgroundGaussianMaskView.hidden = YES;
+                break;
+            }
+            case CCWebScrollPanelBackgroundMaskTypeGray:
+            {
+                [self __moveContainerToSuperview:self.backgroundGrayMaskView];
+                self.backgroundGaussianMaskView.hidden = YES;
+                self.backgroundGrayMaskView.hidden = NO;
+                break;
+            }
+            case CCWebScrollPanelBackgroundMaskTypeGaussian:
+            {
+                [self __moveContainerToSuperview:self.backgroundGaussianMaskView.contentView];
+                self.backgroundGaussianMaskView.hidden = NO;
+                self.backgroundGrayMaskView.hidden = YES;
+                break;
+            }
+                
+            default:
+                break;
+        }
+    }];
+}
+
 #pragma mark - Private
 
 - (void)__setupViews
 {
-    [self.view addSubview:self.containerView];
-    
-    CGFloat topMargin = [self topInitMargin];
-
-    NSLayoutConstraint *containerLeadingConstraint = [NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
-    NSLayoutConstraint *containerTrailingConstraint = [NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
-    NSLayoutConstraint *containerBottomConstraint = [NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
-    NSLayoutConstraint *containerTopConstraint = [NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:topMargin];
-    self.containerTopConstraint = containerTopConstraint;
-
-    [self.view addConstraint:containerLeadingConstraint];
-    [self.view addConstraint:containerTrailingConstraint];
-    [self.view addConstraint:containerBottomConstraint];
-    [self.view addConstraint:containerTopConstraint];
+    [self setBackgroundMaskType:CCWebScrollPanelBackgroundMaskTypeNone];
     
     [self.view addGestureRecognizer:self.backgroundTapGesture];
     
+    [self.view addSubview:self.backgroundGrayMaskView];
+    NSLayoutConstraint *maskGrayLeadingConstraint = [NSLayoutConstraint constraintWithItem:self.backgroundGrayMaskView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
+    NSLayoutConstraint *maskGrayTrailingConstraint = [NSLayoutConstraint constraintWithItem:self.backgroundGrayMaskView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
+    NSLayoutConstraint *maskGrayTopConstraint = [NSLayoutConstraint constraintWithItem:self.backgroundGrayMaskView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:-[UIScreen mainScreen].bounds.size.height];
+    NSLayoutConstraint *maskGrayBottomConstraint = [NSLayoutConstraint constraintWithItem:self.backgroundGrayMaskView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
+    [self.view addConstraint:maskGrayLeadingConstraint];
+    [self.view addConstraint:maskGrayTrailingConstraint];
+    [self.view addConstraint:maskGrayTopConstraint];
+    [self.view addConstraint:maskGrayBottomConstraint];
+    
+    [self.view addSubview:self.backgroundGaussianMaskView];
+    NSLayoutConstraint *maskGaussianLeadingConstraint = [NSLayoutConstraint constraintWithItem:self.backgroundGaussianMaskView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
+    NSLayoutConstraint *maskGaussianTrailingConstraint = [NSLayoutConstraint constraintWithItem:self.backgroundGaussianMaskView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
+    NSLayoutConstraint *maskGaussianTopConstraint = [NSLayoutConstraint constraintWithItem:self.backgroundGaussianMaskView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:-[UIScreen mainScreen].bounds.size.height];
+    NSLayoutConstraint *maskGaussianBottomConstraint = [NSLayoutConstraint constraintWithItem:self.backgroundGaussianMaskView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
+    [self.view addConstraint:maskGaussianLeadingConstraint];
+    [self.view addConstraint:maskGaussianTrailingConstraint];
+    [self.view addConstraint:maskGaussianTopConstraint];
+    [self.view addConstraint:maskGaussianBottomConstraint];
+
     [self.containerView addSubview:self.topView];
     
     NSLayoutConstraint *topViewLeadingConstraint = [NSLayoutConstraint constraintWithItem:self.topView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.containerView attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
@@ -100,11 +147,22 @@
     [self.webView addGestureRecognizer:self.syncWebPanGesture];
 }
 
+- (void)__close
+{
+    [self __removeMask];
+    [self __callWebViewShouldClose];
+}
+
 - (void)__callWebViewShouldClose
 {
     if ([self.delegate respondsToSelector:@selector(webViewScrollPanelShouldClose:)]) {
         [self.delegate webViewScrollPanelShouldClose:self];
     }
+}
+
+- (void)__removeMask
+{
+    [self setBackgroundMaskType:CCWebScrollPanelBackgroundMaskTypeNone];
 }
 
 /// 这个方法处理了拖动松手后容器的位置变化
@@ -117,7 +175,7 @@
 
     if (offset > [self closeHeightMargin] || (velocity > [self closeVelocity] && offset > 0)) {
         // 关掉容器
-        [self __callWebViewShouldClose];
+        [self __close];
     } else if (![self heightIncreaseMode]){
         // 不可增高的时候, 如果不关闭容器, 恢复固定的高度
         [UIView animateWithDuration:0.18 animations:^{
@@ -172,6 +230,35 @@
     [self.view updateConstraintsIfNeeded];
 }
 
+- (void)__moveContainerToSuperview:(UIView *)superview
+{
+    if (self.containerView.superview == superview) return;
+    
+    [self.containerView removeFromSuperview];
+    
+    CGFloat topMargin = [self topInitMargin];
+    if (self.containerTopConstraint) {
+        topMargin = self.containerTopConstraint.constant;
+    }
+    
+    if (superview == self.backgroundGrayMaskView || superview == self.backgroundGaussianMaskView.contentView) {
+        topMargin += [UIScreen mainScreen].bounds.size.height;
+    }
+    
+    [superview addSubview:self.containerView];
+    
+    NSLayoutConstraint *containerLeadingConstraint = [NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:superview attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
+    NSLayoutConstraint *containerTrailingConstraint = [NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:superview attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
+    NSLayoutConstraint *containerBottomConstraint = [NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:superview attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
+    NSLayoutConstraint *containerTopConstraint = [NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:superview attribute:NSLayoutAttributeTop multiplier:1 constant:topMargin];
+    self.containerTopConstraint = containerTopConstraint;
+
+    [superview addConstraint:containerLeadingConstraint];
+    [superview addConstraint:containerTrailingConstraint];
+    [superview addConstraint:containerBottomConstraint];
+    [superview addConstraint:containerTopConstraint];
+}
+
 #pragma mark - Action
 
 /// 这个方法处理了顶部bar被手势拖动开始/位置改变/结束时容器的位置变化
@@ -213,12 +300,12 @@
 {
     if (![recognizer isKindOfClass:[UITapGestureRecognizer class]]) return;
     
-    [self __callWebViewShouldClose];
+    [self __close];
 }
 
 - (void)handleTapClose
 {
-    [self __callWebViewShouldClose];
+    [self __close];
 }
 
 /// 同步webView滚动的触发
@@ -342,6 +429,25 @@
         _containerView.translatesAutoresizingMaskIntoConstraints = NO;
     }
     return _containerView;
+}
+
+- (UIView *)backgroundGrayMaskView
+{
+    if (!_backgroundGrayMaskView) {
+        _backgroundGrayMaskView = [[UIView alloc] init];
+        _backgroundGrayMaskView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.24];
+        _backgroundGrayMaskView.translatesAutoresizingMaskIntoConstraints = NO;
+    }
+    return _backgroundGrayMaskView;
+}
+
+- (UIVisualEffectView *)backgroundGaussianMaskView
+{
+    if (!_backgroundGaussianMaskView) {
+        _backgroundGaussianMaskView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
+        _backgroundGaussianMaskView.translatesAutoresizingMaskIntoConstraints = NO;
+    }
+    return _backgroundGaussianMaskView;
 }
 
 - (UIPanGestureRecognizer *)topBarPanGesture

@@ -11,6 +11,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSUInteger, CCWebScrollPanelBackgroundMaskType) {
+    CCWebScrollPanelBackgroundMaskTypeNone, // default
+    CCWebScrollPanelBackgroundMaskTypeGray,
+    CCWebScrollPanelBackgroundMaskTypeGaussian,
+};
+
 @class CCWebScrollPanelViewController;
 
 @protocol CCWebViewScrollPanelActionDelegate <NSObject>
@@ -30,6 +36,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithWebView:(UIView<CCWebView> *)webView delegate:(nullable id<CCWebViewScrollPanelActionDelegate>)delegate NS_DESIGNATED_INITIALIZER;
 - (instancetype)initWithCoder:(NSCoder *)coder NS_UNAVAILABLE;
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil NS_UNAVAILABLE;
+
+- (void)setPanelTitle:(NSString *)title;
+- (void)setBackgroundMaskType:(CCWebScrollPanelBackgroundMaskType)maskType;
 
 @end
 
