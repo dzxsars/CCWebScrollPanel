@@ -24,7 +24,7 @@
       "CCWebScrollPanel/Assets/**/*"
     ]
   },
-  "public_header_files": "Pod/Classes/**/*.h",
+  "public_header_files": "CCWebScrollPanel/Classes/**/*.h",
   "frameworks": [
     "UIKit",
     "WebKit"

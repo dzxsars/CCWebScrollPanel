@@ -34,7 +34,7 @@ typedef NS_ENUM(NSUInteger, CCWebScrollPanelBackgroundMaskType) {
 
 - (instancetype)initWithWebView:(UIView<CCWebView> *)webView;
 - (instancetype)initWithWebView:(UIView<CCWebView> *)webView delegate:(nullable id<CCWebViewScrollPanelActionDelegate>)delegate NS_DESIGNATED_INITIALIZER;
-- (instancetype)initWithCoder:(NSCoder *)coder NS_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder *)coder NS_UNAVAILABLE;
 - (instancetype)initWithNibName:(nullable NSString *)nibNameOrNil bundle:(nullable NSBundle *)nibBundleOrNil NS_UNAVAILABLE;
 
 - (void)setPanelTitle:(NSString *)title;
