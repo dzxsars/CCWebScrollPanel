@@ -34,6 +34,6 @@ TODO: Add long description of the pod here.
     'CCWebScrollPanel' => ['CCWebScrollPanel/Assets/**/*']
   }
 
-  s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'CCWebScrollPanel/Classes/**/*.h'
   s.frameworks = 'UIKit', 'WebKit'
 end
